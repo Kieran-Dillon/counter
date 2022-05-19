@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <style>
+        body{
+            background-color:lightgray;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            font-size: 3em;
+            color: darkgreen;
+
+        }
+        /*  #inc_button{
+            background-color:black;
+            color: white;
+            font-size: 2em;
+            height: 75px;
+            width: 180px;
+        }
+        #value_counter{
+            font-size: 1.5em;
+        }
+        #result{
+            font-size: 2em;
+            color: red;
+            font-weight: 600;
+        }
+         */ 
+        
+        #p_container{
+            text-align: center;
+        }
+
+        #button_container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Counter</h1>
+        <div id="button_container">
+            <button id="inc_button" onclick="increment()">
+                Increment
+            </button>
+            <button id="dec_button" onclick="dec()">
+                Decrement
+            </button>
+            <button onclick="clear_counter()">
+                Clear
+            </button>
+        </div>
+        <div id="p_container">
+            <p id="value_counter">
+                Value =
+            </p><p id="result">
+                value
+            </p>
+        </div>
+    </div>
+    <script>
+        let counter = 0;
+        let increment = () => {
+            counter = counter + 1;
+            document.getElementById("result").innerHTML = counter;
+        }
+        let dec = () => {
+            counter = counter - 1;
+            document.getElementById("result").innerHTML = counter;
+        }
+        let clear_counter = () => {
+            counter = 0;
+            document.getElementById("result").innerHTML = counter;
+        }
+
+    </script>
+</body>
+</html>
